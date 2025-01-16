@@ -1,0 +1,128 @@
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vh;
+
+  div:nth-child(1) {
+    grid-column: 1/4;
+    padding: 3rem;
+    h1 {
+      font-size: 3rem;
+    }
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 2rem;
+      .input {
+        padding: 0;
+        grid-column: 1/2;
+        p {
+          padding: 1rem 5rem 0 0;
+          display: flex;
+          justify-content: space-between;
+          input {
+            background-color: green;
+            border-radius: 5px;
+          }
+        }
+      }
+      button {
+        grid-column: 2/3;
+        font-size: 3rem;
+        background-color: green;
+        border-radius: 5px;
+        margin-top: 1rem;
+        color: black;
+        &:hover {
+          cursor: pointer;
+          background-color: darkgreen;
+        }
+      }
+    }
+  }
+  div:nth-child(2) {
+    grid-column: 4/5;
+    grid-row: 1/5;
+  }
+  div:nth-child(3) {
+    grid-column: 1/4;
+    grid-row: 2/5;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  div:nth-child(1) {
+    grid-column: 1/2;
+    padding: 2rem;
+
+    .form {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      justify-items: stretch;
+
+      .input {
+        p {
+          flex-direction: column;
+          align-items: flex-start;
+          input {
+            width: 100%;
+          }
+        }
+      }
+
+      button {
+        justify-self: stretch;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  div:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+
+  div:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+} */
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Eén kolom */
+    grid-template-rows: auto; /* Rijen aangepast aan inhoud */
+  }
+
+  .header,
+  .sidebar,
+  .grid {
+    grid-column: 1 / -1; /* Alle elementen vullen de volledige breedte */
+  }
+
+  .sidebar,
+  .grid {
+    grid-row: auto; /* Dynamische volgorde */
+  }
+}
